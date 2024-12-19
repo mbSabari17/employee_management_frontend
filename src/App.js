@@ -1,10 +1,11 @@
 import React from "react";
+import Navbar from './Navbar';
 
-const App = () =>{
+const App = () => {
     return (
-        <h1>
-            Hello world! I am using React
-        </h1>
+        <div className="App">
+            <Navbar />
+        </div>
     )
 }
 
