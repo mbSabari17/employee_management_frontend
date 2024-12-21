@@ -8,7 +8,7 @@ const EmployeeList = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await fetch('http://localhost:8080/employees'); 
+        const response = await fetch('http://localhost:8080/employees');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -32,7 +32,7 @@ const EmployeeList = () => {
       <h2>Employee List</h2>
       <ul>
         {employees.map((employee) => (
-          <li key={employee.id}>{employee.firstName}</li> 
+          <li key={employee.id}>{employee.firstName}</li>
         ))}
       </ul>
     </div>

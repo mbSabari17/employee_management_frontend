@@ -10,33 +10,33 @@ const EmployeeCreate = () => {
         department: '',
         phone: '',
         email: '',
-      });
+    });
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
-          ...prevData,
-          [name]: value,
+            ...prevData,
+            [name]: value,
         }));
-      };
-      const handleSubmit = async (e) => {
+    };
+    const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await fetch('http://localhost:8080/employees', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-          });
-          if (response.ok) {
-            alert('Employee Created successfully');
-          } else {
-            alert(`Server error: ${response.statusText}`);
-          }
+            const response = await fetch('http://localhost:8080/employees', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            if (response.ok) {
+                alert('Employee Created successfully');
+            } else {
+                alert(`Server error: ${response.statusText}`);
+            }
         } catch (error) {
-          alert(`Network error: ${error.message}`);
+            alert(`Network error: ${error.message}`);
         }
-      };
+    };
 
     return (
         <form onSubmit={handleSubmit}>
@@ -100,7 +100,7 @@ const EmployeeCreate = () => {
                     required
                 />
             </label>
-            <button type="submit">Create</button>
+            <button type="submit" className='create-button'>Create</button>
         </form>
     );
 };
