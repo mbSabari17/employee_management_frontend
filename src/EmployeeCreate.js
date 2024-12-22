@@ -62,23 +62,33 @@ const EmployeeCreate = () => {
             </label>
             <label>
                 Position:
-                <input
-                    type="text"
+                <select
                     name="position"
                     value={formData.position}
                     onChange={handleChange}
                     required
-                />
+                >
+                    <option value="">Select a position</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Intern">Intern</option>
+                    <option value="Manager">Manager</option>
+                </select>
             </label>
             <label>
                 Department:
-                <input
-                    type="text"
+                <select
                     name="department"
                     value={formData.department}
                     onChange={handleChange}
                     required
-                />
+                >
+                    <option value="">Select a department</option>
+                    <option value="HR">HR</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
             </label>
             <label>
                 Phone:
